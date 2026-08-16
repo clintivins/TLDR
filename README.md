@@ -11,11 +11,15 @@ Add these repository secrets under **Settings -> Secrets and variables -> Action
 | Secret | Value |
 | --- | --- |
 | `NEWS_EMAIL_TO` | Address that should receive the digest |
-| `SMTP_FROM` | Sender address accepted by your SMTP provider |
-| `SMTP_HOST` | SMTP server hostname, such as `smtp.gmail.com` |
+| `SMTP_FROM` | Your Gmail sender address, such as `name@gmail.com` |
+| `SMTP_HOST` | `smtp.gmail.com` |
 | `SMTP_PORT` | `465` for SSL or `587` for STARTTLS |
-| `SMTP_USERNAME` | SMTP login, usually the sender address |
-| `SMTP_PASSWORD` | SMTP password or provider app password |
+| `SMTP_USERNAME` | Your Gmail sender address |
+| `SMTP_PASSWORD` | A Google app password, not your normal Gmail password |
+
+For Gmail, enable 2-Step Verification and create an app password under your
+Google Account security settings. Use that 16-character app password for
+`SMTP_PASSWORD`.
 
 The workflow runs at 07:00 Europe/London and can also be started manually from
 the **Actions** tab. GitHub may delay scheduled workflows by several minutes.
